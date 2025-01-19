@@ -1,4 +1,22 @@
 ---
+const pageTitle = "About Me";
+
+
+const identity = {
+
+	firstName : "Sarah",
+	country : "Canada",
+	occupation : "Web Developer",
+	hobbies : ["reading", "writing", "coding"],
+};
+
+const skills =["Html, CSS, Javascript, Astro"];
+
+const happy = true;
+const sad = false;
+const goal = 3;
+
+
 
 ---
 
@@ -8,7 +26,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 
@@ -18,7 +36,13 @@
 
 <h1>About Me</h1>
 <h2>... and my new Astro site!</h2>
-		<h1>Astro About Site</h1>
+		<h1>{pageTitle}</h1>
         <h2>Strong Spectrum Hello </h2>
+
+		{happy && <p> I am happy</p>}
+		{sad && <p> I am sad</p>}
+		{goal === 3? <p> Have I met my 3 day goal</p>: <p> I have not met my 3 day goal</p>}
+
+
 	</body>
 </html> 
